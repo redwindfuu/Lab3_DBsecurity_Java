@@ -6,9 +6,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import java.util.Objects;
 
-import com.app.Constains.SQLConstant;
 
 public class LoginController {
     String user = "Admin";

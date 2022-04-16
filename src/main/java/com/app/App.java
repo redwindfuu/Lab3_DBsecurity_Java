@@ -8,16 +8,14 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Main extends Application {
+public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        if(ConnectSQL.getConnection() == null){
-            return;
-        }
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("login-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-        stage.setTitle("Login");
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("connect-db-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 900, 400);
+        stage.setTitle("Login DB");
         stage.setScene(scene);
+        stage.setResizable(false);
         stage.show();
     }
 

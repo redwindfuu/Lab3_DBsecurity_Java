@@ -1,4 +1,4 @@
-module com.example.javafx {
+module com {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -10,4 +10,5 @@ module com.example.javafx {
     exports com.app;
     exports com.app.Controller;
     opens com.app.Controller to javafx.fxml;
+    exports com;
 }

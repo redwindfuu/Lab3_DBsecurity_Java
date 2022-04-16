@@ -9,10 +9,10 @@ import java.sql.Statement;
 
 public class ConnectSQL {
     public static Connection con;
-    public static Connection getConnection(){
+    public static Connection getConnection( String Url , String username, String password) {
         try {
             Class.forName(SQLConstant.DRIVER);
-            con = java.sql.DriverManager.getConnection(SQLConstant.URL, SQLConstant.USER, SQLConstant.PASS);
+            con = java.sql.DriverManager.getConnection(Url, username, password);
             if (con != null) {
                 System.out.println("Connect to the database successfully!");
             }else {
